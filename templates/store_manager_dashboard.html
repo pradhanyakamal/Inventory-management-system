@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Manager Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/034/573/911/non_2x/logistics-inspired-table-setting-perfect-for-product-presentation-ai-generated-free-photo.jpg');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row; /* Make it a row layout */
+        }
+
+        .side-panel {
+            background-color: #000000f1;
+            color: #fff;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            height: 100vh; /* Make the side panel cover the entire height of the viewport */
+            display: flex;
+            flex-direction: column; /* Arrange buttons in a column */
+            justify-content: flex-start; /* Align buttons to the start of the column */
+        }
+
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align content horizontally */
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width:auto; /* Make buttons take the full width of the side panel */
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .box-container {
+            border: 1px solid #ddd;
+            background-color: #ffffff79;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="side-panel">
+        <button class="button" onclick="location.href='/store_manager/add_item_to_cart'">Add Item</button>
+        <button class="button" onclick="location.href='/store_manager/delete_item'">Delete Item</button>
+    </div>
+    <div class="content">
+        <div class="box-container">
+        <h2>Store Manager Dashboard</h2>
+        <div>
+            <button class="button" onclick="location.href='/store_manager/show_available_items'">Show Available Items</button>
+            <button class="button" onclick="location.href='/store_manager/show_cart'">View Cart</button>
+        </div>
+        </div>
+        <!-- Additional content goes here -->
+    </div>
+</body>
+</html>

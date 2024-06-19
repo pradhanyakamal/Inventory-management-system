@@ -1,0 +1,85 @@
+<!-- templates/display_records.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Records</title>
+    <style>
+
+body {
+            font-family: 'Arial', sans-serif;
+            background-color: #070202;
+            background-image: url('https://cdn.wallpapersafari.com/45/51/lfwHPQ.jpg');
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .table-container {
+            background-color: rgba(10, 7, 7, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            text-align: center;
+        }
+        h2{
+            color : #cfd5db;
+        }
+
+        table {
+            width: 100%;
+            
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #0f0202;
+            padding: 8px;
+            color: #cfd5db;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #cfd5db;
+        }
+        td.item-color {
+            color: #d7e605; /* Change to your desired color */
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+    <h2>Product Records</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+                <tr>
+                    <td>{{ record.id }}</td>
+                    <td>{{ record.name }}</td>
+                    <td>{{ record.quantity }}</td>
+                    <td>${{ record.price }}</td>
+                    
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

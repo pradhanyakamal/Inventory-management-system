@@ -1,0 +1,8 @@
+[
+    {"id": 1, "name": "Pencil", "quantity": 100, "price": 10.0},
+    {"id": 2, "name": "Book", "quantity": 50, "price": 500.0},
+    {"id": 3, "name": "Eraser", "quantity": 70, "price": 5.0},
+    {"id": 4, "name": "Pen", "quantity": 500, "price": 20.0},
+    {"id": 5, "name": "Sharpener", "quantity": 20, "price": 10.0}
+  ]
+  
